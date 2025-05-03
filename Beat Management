@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Beat Management</title>
+    <style>
+        :root {
+            --bg-light: #ffffff;
+            --bg-dark: #121212;
+            --text-light: #000000;
+            --text-dark: #ffffff;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-light);
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .nav-buttons button {
+            margin-left: 10px;
+        }
+
+        .section {
+            padding: 40px 20px;
+        }
+
+        .section h2 {
+            margin-bottom: 20px;
+        }
+
+        #theme-toggle {
+            cursor: pointer;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        /* Beat Management Section Styles */
+        .beats-section {
+            padding: 40px 20px;
+            background-color: #f9f9f9;
+        }
+
+        .beats-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .beats-table th, .beats-table td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        .beats-table th {
+            background-color: #f5f5f5;
+        }
+
+        .beat-actions {
+            text-align: center;
+        }
+
+        .beat-status {
+            font-weight: bold;
+        }
+
+        .beat-status.available {
+            color: #28a745; /* Green for available */
+        }
+
+        .beat-status.sold {
+            color: #dc3545; /* Red for sold */
+        }
+
+        .add-beat-btn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        .add-beat-btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Affordable Beats - Admin Dashboard</div>
+        <div class="nav-buttons">
+            <button onclick="location.href='admin-login.html'">Logout</button>
+            <button id="theme-toggle">Toggle Theme</button>
+        </div>
+    </header>
+
+    <div class="banner" id="main-banner">
+        <!-- Background image goes here: replace with an image named 'banner-placeholder.jpg' -->
+    </div>
+
+    <!-- Beat Management Section -->
+    <div class="beats-section" id="beats">
+        <h3>Beat Management</h3>
+
+        <!-- Add Beat Button -->
+        <button class="add-beat-btn" onclick="location.href='add-beat.html'">Add New Beat</button>
+
+        <!-- Beats Table -->
+        <table class="beats-table" id="beats-table">
+            <thead>
+                <tr>
+                    <th>Beat Name</th>
+                    <th>Category</th>
+                    <th>Price</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Trap Beat 1</td>
+                    <td>Trap</td>
+                    <td>$20</td>
+                    <td class="beat-status available">Available</td>
+                    <td class="beat-actions">
+                        <button onclick="location.href='edit-beat.html'">Edit</button>
+                        <button onclick="deleteBeat(1)">Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Hip-Hop Beat 3</td>
+                    <td>Hip-Hop</td>
+                    <td>$30</td>
+                    <td class="beat-status sold">Sold</td>
+                    <td class="beat-actions">
+                        <button onclick="location.href='edit-beat.html'">Edit</button>
+                        <button onclick="deleteBeat(2)">Delete</button>
+                    </td>
+                </tr>
+                <!-- Add more beats as needed -->
+            </tbody>
+        </table>
+    </div>
+
+    <footer>
+        &copy; 2025 Affordable Beats - Admin Dashboard
+    </footer>
+
+    <script>
+        // Function to delete a beat (just a placeholder)
+        function deleteBeat(beatId) {
+            // Logic for deleting the beat goes here
+            alert('Deleting beat with ID ' + beatId);
+        }
+    </script>
+</body>
+</html>
