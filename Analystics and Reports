@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Analytics</title>
+    <style>
+        :root {
+            --bg-light: #ffffff;
+            --bg-dark: #121212;
+            --text-light: #000000;
+            --text-dark: #ffffff;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-light);
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .nav-buttons button {
+            margin-left: 10px;
+        }
+
+        .section {
+            padding: 40px 20px;
+        }
+
+        .section h2 {
+            margin-bottom: 20px;
+        }
+
+        #theme-toggle {
+            cursor: pointer;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        /* Admin Dashboard Analytics Styles */
+        .analytics-section {
+            padding: 40px 20px;
+            background-color: #f9f9f9;
+        }
+
+        .analytics-card {
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .analytics-card h4 {
+            margin-bottom: 20px;
+        }
+
+        .analytics-stat {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .analytics-chart {
+            height: 200px;
+            background-color: #ddd;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Affordable Beats - Admin Dashboard</div>
+        <div class="nav-buttons">
+            <button onclick="location.href='admin-login.html'">Logout</button>
+            <button id="theme-toggle">Toggle Theme</button>
+        </div>
+    </header>
+
+    <div class="banner" id="main-banner">
+        <!-- Background image goes here: replace with an image named 'banner-placeholder.jpg' -->
+    </div>
+
+    <!-- Analytics Section -->
+    <div class="analytics-section" id="analytics">
+        <h3>Analytics and Reporting</h3>
+
+        <!-- Sales Overview -->
+        <div class="analytics-card">
+            <h4>Sales Overview</h4>
+            <div class="analytics-stat">
+                <span>Total Sales:</span>
+                <span>$0.00</span>
+            </div>
+            <div class="analytics-stat">
+                <span>Total Revenue:</span>
+                <span>$0.00</span>
+            </div>
+            <div class="analytics-stat">
+                <span>Beats Sold:</span>
+                <span>0</span>
+            </div>
+        </div>
+
+        <!-- Order Tracking -->
+        <div class="analytics-card">
+            <h4>Order Tracking</h4>
+            <div class="analytics-stat">
+                <span>Recent Order #1</span>
+                <span>Beat: [Beat Name], Status: Pending</span>
+            </div>
+            <div class="analytics-stat">
+                <span>Recent Order #2</span>
+                <span>Beat: [Beat Name], Status: Completed</span>
+            </div>
+            <button class="btn">View All Orders</button>
+        </div>
+
+        <!-- Top Selling Beats -->
+        <div class="analytics-card">
+            <h4>Top Selling Beats</h4>
+            <div class="analytics-stat">
+                <span>[Beat Name] - Sales: 50</span>
+            </div>
+            <div class="analytics-stat">
+                <span>[Beat Name] - Sales: 40</span>
+            </div>
+            <div class="analytics-stat">
+                <span>[Beat Name] - Sales: 30</span>
+            </div>
+            <button class="btn">View All Top Sellers</button>
+        </div>
+
+        <!-- Analytics Chart (Placeholder for future data visualization) -->
+        <div class="analytics-chart">
+            <!-- Placeholder for chart, you can integrate chart libraries like Chart.js later -->
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2025 Affordable Beats - Admin Dashboard
+    </footer>
+
+    <script>
+        const toggle = document.getElementById('theme-toggle');
+        toggle.addEventListener('click', () => {
+            const body = document.body;
+            if (body.style.backgroundColor === 'var(--bg-dark)') {
+                body.style.backgroundColor = 'var(--bg-light)';
+                body.style.color = 'var(--text-light)';
+            } else {
+                body.style.backgroundColor = 'var(--bg-dark)';
+                body.style.color = 'var(--text-dark)';
+            }
+        });
+    </script>
+</body>
+</html>
