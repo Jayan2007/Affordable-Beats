@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Payment Management</title>
+    <style>
+        :root {
+            --bg-light: #ffffff;
+            --bg-dark: #121212;
+            --text-light: #000000;
+            --text-dark: #ffffff;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-light);
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .nav-buttons button {
+            margin-left: 10px;
+        }
+
+        .section {
+            padding: 40px 20px;
+        }
+
+        .section h2 {
+            margin-bottom: 20px;
+        }
+
+        #theme-toggle {
+            cursor: pointer;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        .banner {
+            width: 100%;
+            height: 300px;
+            background-image: url('banner-placeholder.jpg'); /* Top homepage banner - Replace with your image named 'banner-placeholder.jpg' */
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Admin Dashboard Specific Styles */
+        .dashboard-section {
+            padding: 40px 20px;
+            background-color: #f9f9f9;
+        }
+
+        .dashboard-section h2 {
+            margin-bottom: 20px;
+        }
+
+        .input-field {
+            margin-bottom: 10px;
+            width: 100%;
+            padding: 10px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        .card {
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        /* Payment Management Section */
+        .payment-management {
+            padding: 40px 20px;
+            background-color: #f9f9f9;
+        }
+
+        .payment-management h3 {
+            margin-bottom: 20px;
+        }
+
+        .payment-card {
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .payment-options {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Affordable Beats - Admin Dashboard</div>
+        <div class="nav-buttons">
+            <button onclick="location.href='admin-login.html'">Logout</button>
+            <button id="theme-toggle">Toggle Theme</button>
+        </div>
+    </header>
+
+    <div class="banner" id="main-banner">
+        <!-- Background image goes here: replace with an image named 'banner-placeholder.jpg' -->
+    </div>
+
+    <!-- Payment Management Section -->
+    <div class="payment-management" id="payment-management">
+        <h3>Payment and Pricing Management</h3>
+
+        <!-- Beat Pricing Section -->
+        <div class="payment-card">
+            <h4>Set Beat Prices</h4>
+            <label for="non-exclusive-price">Non-Exclusive Beat Price:</label>
+            <input type="number" class="input-field" placeholder="Set price for non-exclusive beats" id="non-exclusive-price" step="0.01">
+            <label for="exclusive-price">Exclusive Beat Price:</label>
+            <input type="number" class="input-field" placeholder="Set price for exclusive beats" id="exclusive-price" step="0.01">
+            <button class="btn">Update Prices</button>
+        </div>
+
+        <!-- Payment Options Section -->
+        <div class="payment-card">
+            <h4>Payment Methods</h4>
+            <div class="payment-options">
+                <label for="paypal-link">PayPal Link:</label>
+                <input type="text" class="input-field" placeholder="Add your PayPal link here" id="paypal-link" disabled>
+                <label for="credit-card-method">Credit/Debit Card Integration:</label>
+                <input type="text" class="input-field" placeholder="Add your card payment method details here" id="credit-card-method" disabled>
+                <label for="other-methods">Other Payment Methods:</label>
+                <input type="text" class="input-field" placeholder="Add any other payment methods here" id="other-methods" disabled>
+            </div>
+            <button class="btn">Save Payment Methods</button>
+        </div>
+
+    </div>
+
+    <footer>
+        &copy; 2025 Affordable Beats - Admin Dashboard
+    </footer>
+
+    <script>
+        const toggle = document.getElementById('theme-toggle');
+        toggle.addEventListener('click', () => {
+            const body = document.body;
+            if (body.style.backgroundColor === 'var(--bg-dark)') {
+                body.style.backgroundColor = 'var(--bg-light)';
+                body.style.color = 'var(--text-light)';
+            } else {
+                body.style.backgroundColor = 'var(--bg-dark)';
+                body.style.color = 'var(--text-dark)';
+            }
+        });
+    </script>
+</body>
+</html>
