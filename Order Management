@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Order Management</title>
+    <style>
+        :root {
+            --bg-light: #ffffff;
+            --bg-dark: #121212;
+            --text-light: #000000;
+            --text-dark: #ffffff;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-light);
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .nav-buttons button {
+            margin-left: 10px;
+        }
+
+        .section {
+            padding: 40px 20px;
+        }
+
+        .section h2 {
+            margin-bottom: 20px;
+        }
+
+        #theme-toggle {
+            cursor: pointer;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        /* Order Management Section Styles */
+        .orders-section {
+            padding: 40px 20px;
+            background-color: #f9f9f9;
+        }
+
+        .orders-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .orders-table th, .orders-table td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        .orders-table th {
+            background-color: #f5f5f5;
+        }
+
+        .order-details {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #fff;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .order-status {
+            font-weight: bold;
+            color: #28a745; /* Green for completed */
+        }
+
+        .order-status.pending {
+            color: #ffc107; /* Yellow for pending */
+        }
+
+        .order-status.completed {
+            color: #28a745; /* Green for completed */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Affordable Beats - Admin Dashboard</div>
+        <div class="nav-buttons">
+            <button onclick="location.href='admin-login.html'">Logout</button>
+            <button id="theme-toggle">Toggle Theme</button>
+        </div>
+    </header>
+
+    <div class="banner" id="main-banner">
+        <!-- Background image goes here: replace with an image named 'banner-placeholder.jpg' -->
+    </div>
+
+    <!-- Order Management Section -->
+    <div class="orders-section" id="orders">
+        <h3>Order Management</h3>
+
+        <!-- Filter by Status -->
+        <label for="order-status-filter">Filter by Status:</label>
+        <select id="order-status-filter" onchange="filterOrders()">
+            <option value="all">All</option>
+            <option value="pending">Pending</option>
+            <option value="completed">Completed</option>
+        </select>
+
+        <!-- Orders Table -->
+        <table class="orders-table" id="orders-table">
+            <thead>
+                <tr>
+                    <th>Order ID</th>
+                    <th>Customer Name</th>
+                    <th>Beat Purchased</th>
+                    <th>Order Date</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1001</td>
+                    <td>John Doe</td>
+                    <td>Trap Beat 1</td>
+                    <td>2025-05-02</td>
+                    <td class="order-status completed">Completed</td>
+                </tr>
+                <tr>
+                    <td>1002</td>
+                    <td>Jane Smith</td>
+                    <td>Hip-Hop Beat 3</td>
+                    <td>2025-05-01</td>
+                    <td class="order-status pending">Pending</td>
+                </tr>
+                <!-- Add more orders as needed -->
+            </tbody>
+        </table>
+
+        <!-- Order Details (Placeholder) -->
+        <div class="order-details" id="order-details">
+            <h4>Order Details</h4>
+            <p><strong>Customer:</strong> John Doe</p>
+            <p><strong>Beat:</strong> Trap Beat 1</p>
+            <p><strong>Order Date:</strong> 2025-05-02</p>
+            <p><strong>Status:</strong> Completed</p>
+            <!-- Add more order details if needed -->
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2025 Affordable Beats - Admin Dashboard
+    </footer>
+
+    <script>
+        // JavaScript for filtering orders by status
+        function filterOrders() {
+            const filterValue = document.getElementById('order-status-filter').value;
+            const orders = document.querySelectorAll('.orders-table tbody tr');
+            orders.forEach(order => {
+                const status = order.querySelector('.order-status').textContent.toLowerCase();
+                if (filterValue === 'all' || status.includes(filterValue)) {
+                    order.style.display = '';
+                } else {
+                    order.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
