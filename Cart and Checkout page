@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Checkout - Affordable Beats</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f5f5f5;
+    }
+
+    header {
+      background-color: #111;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: 30px auto;
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      text-align: left;
+      padding: 12px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #eee;
+    }
+
+    .total {
+      font-weight: bold;
+      text-align: right;
+      margin-top: 20px;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 12px 20px;
+      background: #222;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #444;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Checkout</h1>
+  </header>
+
+  <div class="container">
+    <h2>Your Cart</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Beat</th>
+          <th>License</th>
+          <th>Price (USD)</th>
+          <th>Remove</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Dark Trap Beat</td>
+          <td>Non-Exclusive</td>
+          <td>$5</td>
+          <td><button>Remove</button></td>
+        </tr>
+        <tr>
+          <td>Chill Hip-Hop Loop</td>
+          <td>Exclusive</td>
+          <td>$20</td>
+          <td><button>Remove</button></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="total">Total: $25</div>
+
+    <button>Proceed to Payment</button>
+  </div>
+</body>
+</html>
