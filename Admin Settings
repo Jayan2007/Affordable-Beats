@@ -1,0 +1,30 @@
+<div class="section" id="admin-settings">
+    <h2>Admin Settings</h2>
+    <form id="settings-form">
+        <label for="background-color">Change Background Color</label>
+        <input type="color" id="background-color" name="background-color" />
+        <button type="submit">Save Settings</button>
+    </form>
+    
+    <div id="ban-user">
+        <h3>Ban User</h3>
+        <form id="ban-form">
+            <input type="email" id="user-email" placeholder="Enter user email to ban" required />
+            <button type="submit">Ban User</button>
+        </form>
+    </div>
+</div>
+
+<script>
+    document.getElementById('settings-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+        document.body.style.backgroundColor = document.getElementById('background-color').value;
+    });
+
+    document.getElementById('ban-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+        const email = document.getElementById('user-email').value;
+        // Add logic to ban the user (remove their access or mark them as banned)
+        alert(`User with email ${email} is banned!`);
+    });
+</script>
