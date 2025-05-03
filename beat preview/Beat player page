@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Beat Preview - Affordable Beats</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f5f5f5;
+    }
+
+    header {
+      background-color: #111;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .preview-container {
+      max-width: 600px;
+      margin: 40px auto;
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.15);
+      text-align: center;
+    }
+
+    .preview-container h2 {
+      margin-bottom: 20px;
+    }
+
+    audio {
+      width: 100%;
+      margin: 20px 0;
+    }
+
+    button {
+      padding: 12px 25px;
+      background-color: #222;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #444;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Beat Preview</h1>
+  </header>
+
+  <div class="preview-container">
+    <h2>Dark Trap Beat</h2>
+    <audio controls>
+      <source src="dark-trap-preview.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+    <p>Preview only – full download available after purchase.</p>
+    <button>Add to Cart - $5 (Non-Exclusive)</button>
+  </div>
+</body>
+</html>
