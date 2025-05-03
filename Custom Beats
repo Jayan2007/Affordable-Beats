@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Custom Beat Requests</title>
+    <style>
+        :root {
+            --bg-light: #ffffff;
+            --bg-dark: #121212;
+            --text-light: #000000;
+            --text-dark: #ffffff;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-light);
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .nav-buttons button {
+            margin-left: 10px;
+        }
+
+        .section {
+            padding: 40px 20px;
+        }
+
+        .section h2 {
+            margin-bottom: 20px;
+        }
+
+        #theme-toggle {
+            cursor: pointer;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        /* Custom Beat Request Styles */
+        .custom-request-section {
+            padding: 40px 20px;
+            background-color: #f9f9f9;
+        }
+
+        .custom-request-card {
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .custom-request-card h4 {
+            margin-bottom: 20px;
+        }
+
+        .request-stat {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .request-btn {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .request-btn:hover {
+            background-color: #0056b3;
+        }
+
+        /* Request Form Styles */
+        .request-form {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .request-form input, .request-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Affordable Beats - Admin Dashboard</div>
+        <div class="nav-buttons">
+            <button onclick="location.href='admin-login.html'">Logout</button>
+            <button id="theme-toggle">Toggle Theme</button>
+        </div>
+    </header>
+
+    <div class="banner" id="main-banner">
+        <!-- Background image goes here: replace with an image named 'banner-placeholder.jpg' -->
+    </div>
+
+    <!-- Custom Beat Request System Section -->
+    <div class="custom-request-section" id="custom-requests">
+        <h3>Custom Beat Requests</h3>
+
+        <!-- Custom Beat Request Form -->
+        <div class="custom-request-card">
+            <h4>Submit a Custom Beat Request</h4>
+            <form class="request-form" action="/submit-request" method="POST">
+                <label for="customer-name">Customer Name:</label>
+                <input type="text" id="customer-name" name="customer-name" required>
+
+                <label for="beat-style">Beat Style (e.g., Trap, Hip-Hop):</label>
+                <input type="text" id="beat-style" name="beat-style" required>
+
+                <label for="request-details">Details of Request:</label>
+                <textarea id="request-details" name="request-details" rows="4" required></textarea>
+
+                <button type="submit" class="request-btn">Submit Request</button>
+            </form>
+        </div>
+
+        <!-- Custom Beat Request List -->
+        <div class="custom-request-card">
+            <h4>All Custom Requests</h4>
+            <div class="request-stat">
+                <span>Request #1</span>
+                <span>Status: Pending</span>
+                <button class="request-btn">Mark as In Progress</button>
+                <button class="request-btn">Mark as Completed</button>
+            </div>
+            <div class="request-stat">
+                <span>Request #2</span>
+                <span>Status: In Progress</span>
+                <button class="request-btn">Mark as Completed</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2025 Affordable Beats - Admin Dashboard
+    </footer>
+
+    <script>
+        const toggle = document.getElementById('theme-toggle');
+        toggle.addEventListener('click', () => {
+            const body = document.body;
+            if (body.style.backgroundColor === 'var(--bg-dark)') {
+                body.style.backgroundColor = 'var(--bg-light)';
+                body.style.color = 'var(--text-light)';
+            } else {
+                body.style.backgroundColor = 'var(--bg-dark)';
+                body.style.color = 'var(--text-dark)';
+            }
+        });
+    </script>
+</body>
+</html>
