@@ -1,0 +1,18 @@
+<div class="section" id="search-filters">
+    <h2>Search and Filter Beats</h2>
+    <form id="search-form">
+        <input type="text" id="search" placeholder="Search for beats..." />
+        <select id="genre-filter">
+            <option value="all">All Genres</option>
+            <option value="trap">Trap</option>
+            <option value="hip-hop">Hip-Hop</option>
+            <option value="pop">Pop</option>
+        </select>
+        <select id="price-filter">
+            <option value="all">All Prices</option>
+            <option value="free">Free</option>
+            <option value="paid">Paid</option>
+        </select>
+        <button type="submit">Apply Filters</button>
+    </form>
+</div>
