@@ -1,0 +1,22 @@
+<div class="section" id="blog-management">
+    <h2>Blog Management</h2>
+    <button onclick="location.href='create-blog.html'">Create New Blog Post</button>
+    <div id="existing-posts">
+        <h3>Existing Blog Posts</h3>
+        <!-- Admin can click to edit or delete posts -->
+        <ul>
+            <li>
+                <a href="edit-blog.html">Post Title 1</a> <button onclick="deleteBlogPost()">Delete</button>
+            </li>
+            <li>
+                <a href="edit-blog.html">Post Title 2</a> <button onclick="deleteBlogPost()">Delete</button>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<script>
+    function deleteBlogPost() {
+        // Functionality to delete blog post (admin action)
+    }
+</script>
