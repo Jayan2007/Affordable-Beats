@@ -1,0 +1,22 @@
+<div class="section" id="testimonials-management">
+    <h2>Manage Testimonials</h2>
+    <button onclick="location.href='add-testimonial.html'">Add New Testimonial</button>
+    <div id="existing-testimonials">
+        <h3>Existing Testimonials</h3>
+        <!-- Admin can click to edit or delete testimonials -->
+        <ul>
+            <li>
+                "This beat is fire!" - Customer 1 <button onclick="deleteTestimonial()">Delete</button>
+            </li>
+            <li>
+                "Amazing quality, great prices!" - Customer 2 <button onclick="deleteTestimonial()">Delete</button>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<script>
+    function deleteTestimonial() {
+        // Functionality to delete testimonial (admin action)
+    }
+</script>
