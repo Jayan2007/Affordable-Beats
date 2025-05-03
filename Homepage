@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Affordable Beats - Homepage</title>
+    <style>
+        :root {
+            --bg-light: #ffffff;
+            --bg-dark: #121212;
+            --text-light: #000000;
+            --text-dark: #ffffff;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-light);
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .nav-buttons button {
+            margin-left: 10px;
+        }
+
+        .section {
+            padding: 40px 20px;
+        }
+
+        .section h2 {
+            margin-bottom: 20px;
+        }
+
+        #theme-toggle {
+            cursor: pointer;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        .banner {
+            width: 100%;
+            height: 300px;
+            background-image: url('banner-placeholder.jpg'); /* Top homepage banner - Replace with your image named 'banner-placeholder.jpg' */
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Affordable Beats</div>
+        <div class="nav-buttons">
+            <button onclick="location.href='login.html'">Login</button>
+            <button onclick="location.href='signup.html'">Sign Up</button>
+            <button id="theme-toggle">Toggle Theme</button>
+        </div>
+    </header>
+
+    <div class="banner" id="main-banner">
+        <!-- Background image goes here: replace with an image named 'banner-placeholder.jpg' -->
+    </div>
+
+    <div class="section" id="about">
+        <h2>About Affordable Beats</h2>
+        <p>Welcome to Affordable Beats – your go-to platform for high-quality, low-cost beats. Whether you're an underground artist or an upcoming star, we offer exclusive and non-exclusive beats that suit your budget. Explore trap, hip-hop, pop and more. No downloads until purchase – preview before you buy!</p>
+    </div>
+
+    <div class="section" id="featured">
+        <h2>Featured Beats</h2>
+        <img src="featured1.jpg" alt="Featured Beat 1" style="width:100%;max-width:400px;">
+        <!-- Replace with an image named 'featured1.jpg' to represent a featured beat -->
+    </div>
+
+    <div class="section" id="categories">
+        <h2>Beat Categories</h2>
+        <ul>
+            <li>Trap</li>
+            <li>Hip-Hop</li>
+            <li>Pop</li>
+        </ul>
+    </div>
+
+    <div class="section" id="testimonials">
+        <h2>Testimonials</h2>
+        <img src="testimonial-img.jpg" alt="Customer Testimonial" style="width:100%;max-width:300px;">
+        <!-- Replace with an image named 'testimonial-img.jpg' showing a person giving a testimonial -->
+    </div>
+
+    <div class="section" id="blog">
+        <h2>Blog</h2>
+        <img src="blog-img.jpg" alt="Blog Section" style="width:100%;max-width:300px;">
+        <!-- Replace with an image named 'blog-img.jpg' for blog post preview -->
+    </div>
+
+    <footer>
+        &copy; 2025 Affordable Beats
+    </footer>
+
+    <script>
+        const toggle = document.getElementById('theme-toggle');
+        toggle.addEventListener('click', () => {
+            const body = document.body;
+            if (body.style.backgroundColor === 'var(--bg-dark)') {
+                body.style.backgroundColor = 'var(--bg-light)';
+                body.style.color = 'var(--text-light)';
+            } else {
+                body.style.backgroundColor = 'var(--bg-dark)';
+                body.style.color = 'var(--text-dark)';
+            }
+        });
+    </script>
+</body>
+</html>
