@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <style>
+        :root {
+            --bg-light: #ffffff;
+            --bg-dark: #121212;
+            --text-light: #000000;
+            --text-dark: #ffffff;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-light);
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .nav-buttons button {
+            margin-left: 10px;
+        }
+
+        .section {
+            padding: 40px 20px;
+        }
+
+        .section h2 {
+            margin-bottom: 20px;
+        }
+
+        #theme-toggle {
+            cursor: pointer;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        .banner {
+            width: 100%;
+            height: 300px;
+            background-image: url('banner-placeholder.jpg'); /* Top homepage banner - Replace with your image named 'banner-placeholder.jpg' */
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Admin Dashboard Specific Styles */
+        .dashboard-section {
+            padding: 40px 20px;
+            background-color: #f9f9f9;
+        }
+
+        .dashboard-section h2 {
+            margin-bottom: 20px;
+        }
+
+        .input-field {
+            margin-bottom: 10px;
+            width: 100%;
+            padding: 10px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        .card {
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Affordable Beats - Admin Dashboard</div>
+        <div class="nav-buttons">
+            <button onclick="location.href='admin-login.html'">Logout</button>
+            <button id="theme-toggle">Toggle Theme</button>
+        </div>
+    </header>
+
+    <div class="banner" id="main-banner">
+        <!-- Background image goes here: replace with an image named 'banner-placeholder.jpg' -->
+    </div>
+
+    <div class="dashboard-section" id="admin-dashboard">
+        <h2>Admin Dashboard</h2>
+
+        <!-- Payment Settings (Placeholder for future input) -->
+        <div class="card" id="payment-settings">
+            <h3>Payment Settings</h3>
+            <p>Payment settings will be configured later. Add your payment account details here.</p>
+        </div>
+
+        <!-- Producer Management -->
+        <div class="card" id="producer-management">
+            <h3>Producer Management</h3>
+            <p>Manage producers and set their percentage earnings from each beat sale.</p>
+            <input type="text" class="input-field" placeholder="Enter producer's name" id="producer-name">
+            <input type="number" class="input-field" placeholder="Set earnings percentage" id="producer-percentage">
+            <button class="btn">Add Producer</button>
+        </div>
+
+        <!-- Beat Upload Section -->
+        <div class="card" id="beat-upload">
+            <h3>Upload Beats</h3>
+            <p>Upload your beats and set pricing here. Beats can be set as exclusive or non-exclusive.</p>
+            <input type="file" class="input-field" id="beat-file">
+            <input type="text" class="input-field" placeholder="Beat Title" id="beat-title">
+            <input type="number" class="input-field" placeholder="Price" id="beat-price">
+            <button class="btn">Upload Beat</button>
+        </div>
+
+        <!-- Analytics Section -->
+        <div class="card" id="analytics">
+            <h3>Analytics</h3>
+            <p>View sales data, beat downloads, and customer information.</p>
+            <!-- Placeholder for analytics content -->
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2025 Affordable Beats - Admin Dashboard
+    </footer>
+
+    <script>
+        const toggle = document.getElementById('theme-toggle');
+        toggle.addEventListener('click', () => {
+            const body = document.body;
+            if (body.style.backgroundColor === 'var(--bg-dark)') {
+                body.style.backgroundColor = 'var(--bg-light)';
+                body.style.color = 'var(--text-light)';
+            } else {
+                body.style.backgroundColor = 'var(--bg-dark)';
+                body.style.color = 'var(--text-dark)';
+            }
+        });
+    </script>
+</body>
+</html>
