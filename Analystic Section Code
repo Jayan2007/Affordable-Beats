@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Analytics</title>
+    <style>
+        :root {
+            --bg-light: #ffffff;
+            --bg-dark: #121212;
+            --text-light: #000000;
+            --text-dark: #ffffff;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-light);
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .nav-buttons button {
+            margin-left: 10px;
+        }
+
+        .section {
+            padding: 40px 20px;
+        }
+
+        .section h2 {
+            margin-bottom: 20px;
+        }
+
+        #theme-toggle {
+            cursor: pointer;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        /* Analytics Section Styles */
+        .analytics-section {
+            padding: 40px 20px;
+            background-color: #f9f9f9;
+        }
+
+        .analytics-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .analytics-table th, .analytics-table td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        .analytics-table th {
+            background-color: #f5f5f5;
+        }
+
+        .analytics-title {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        .chart {
+            width: 100%;
+            height: 300px;
+            background-color: #e1e1e1;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Affordable Beats - Admin Dashboard</div>
+        <div class="nav-buttons">
+            <button onclick="location.href='admin-login.html'">Logout</button>
+            <button id="theme-toggle">Toggle Theme</button>
+        </div>
+    </header>
+
+    <div class="banner" id="main-banner">
+        <!-- Background image goes here: replace with an image named 'banner-placeholder.jpg' -->
+    </div>
+
+    <!-- Analytics Section -->
+    <div class="analytics-section" id="analytics">
+        <h3 class="analytics-title">Analytics</h3>
+
+        <!-- Sales Data Table -->
+        <table class="analytics-table">
+            <thead>
+                <tr>
+                    <th>Total Beats Sold</th>
+                    <th>Total Revenue</th>
+                    <th>Beat Category Breakdown</th>
+                    <th>Sales by Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>150</td> <!-- Example data for Total Beats Sold -->
+                    <td>$3,000</td> <!-- Example data for Total Revenue -->
+                    <td>Trap: 50, Hip-Hop: 80, Pop: 20</td> <!-- Example data for Beat Category Breakdown -->
+                    <td>January: $500, February: $1,200, March: $1,300</td> <!-- Example data for Sales by Date -->
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Placeholder for chart (you can replace it with a chart later) -->
+        <div class="chart">
+            <!-- Chart content goes here (e.g., Google Charts, Chart.js) -->
+            <p>Chart for Sales Over Time</p>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2025 Affordable Beats - Admin Dashboard
+    </footer>
+
+    <script>
+        // You can use this section to load actual chart data dynamically, if needed
+    </script>
+</body>
+</html>
